@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Script/css/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
+    <link href="Script/css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="Script/css/custom.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,=">
+
+    <title>Konken</title>
+</head>
+<body>
+
+    <!-- Modal for login -->
+    <!-- Login için Modal -->
+    <div id="id01" class="modalLogin">
+
+        <div class="modalLogin-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="Script/css/images/Avatar.png" alt="Avatar" class="avatar" />
+            </div>
+
+            <div class="container">
+                <label for="players"><b>Player Count</b></label>
+                <input id="uName" inputmode="numeric" pattern="[0-9]*"  type="number" placeholder="Enter Player Count" name="uname" min="3" max="5" required>
+                <button id="save" class="ui-btn ui-btn-inline" style="width:150px; background-color:dodgerblue; color:azure" onclick="playerTable();">Submit</button>
+
+
+                <table id="myTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Player Number</th>
+                            <th scope="col">Player Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table" style="color:dodgerblue"></tbody>
+
+                </table>
+
+                <button onclick="createGame();">Create Game</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Div that holds the entire page invisible to allow single page only app -->
+    <!-- Tek sayfa kullanım sağlamak için sayfayı gizli tutan div -->
+    <div class="tableFixHead" id="page">
+        <center>
+            <div class="tableFixHead">
+                <table id="gameTable">
+                </table>
+            </div>
+
+        </center>
+
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="Script/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="Script/js/konken.js"></script>
+</body>
+</html>
