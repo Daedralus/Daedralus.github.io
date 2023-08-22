@@ -1,4 +1,4 @@
-﻿.page{
+.page{
     visibility:hidden;
     overflow: scroll;
 }
@@ -368,7 +368,9 @@ th {
 
 .tableFixHead thead th {
     position: sticky;
+    overflow: scroll;
     top: 0;
+    width: 100%;
 }
 
 
