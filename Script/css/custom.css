@@ -368,9 +368,6 @@ th {
 
 .tableFixHead thead th {
     position: sticky;
-    overflow: scroll;
-    top: 0;
-    width: 100%;
 }
 
 
